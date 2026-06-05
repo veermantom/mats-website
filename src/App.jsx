@@ -6,6 +6,7 @@ function App() {
     surfaceAlt: "#2a2a2a",
     border: "rgba(224, 245, 46, 0.18)",
   };
+
   const achievements = [
     {
       year: "2026",
@@ -79,13 +80,35 @@ function App() {
     },
   ];
 
-  const aboutImage = "/Mats.jpg";
+  const aboutImage = "/Matsenmazda.jpg";
+
+  const galleryImages = [
+    {
+      src: "/Foto 25-04-2026, 15 22 52.jpg",
+      alt: "Mats van Rooijen racing his Mazda MX-5 on track",
+    },
+    {
+      src: "/Foto 18-04-2026, 17 17 27 (1).jpg",
+      alt: "Front view of Mats van Rooijen's Mazda MX-5 Cup car in action",
+    },
+    {
+      src: "/Foto 22-04-2026, 21 37 33.jpg",
+      alt: "Mats van Rooijen with trophy beside his Mazda MX-5 Cup car",
+    },
+  ];
 
   const partners = [
     "Brand visibility on car and racewear",
     "Hospitality and event-day experiences",
     "Social-first content and sponsor shout-outs",
     "Storytelling around progression from karting to cars",
+  ];
+
+  const currentPartners = [
+    {
+      name: "Boost Oxygen",
+      logo: "/Boost Oxygen.png",
+    },
   ];
 
   return (
@@ -130,20 +153,41 @@ function App() {
         }
       `}</style>
 
-      <header className="sticky top-0 z-50 border-b border-white/10 backdrop-blur-xl" style={{ backgroundColor: 'rgba(32, 32, 32, 0.82)' }}>
+      <header
+        className="sticky top-0 z-50 border-b border-white/10 backdrop-blur-xl"
+        style={{ backgroundColor: "rgba(32, 32, 32, 0.82)" }}
+      >
         <div className="mx-auto flex max-w-7xl items-center justify-between px-6 py-4 lg:px-8">
-          <a href="#top" className="text-sm font-semibold uppercase tracking-[0.35em] text-white/90">
+          <a
+            href="#top"
+            className="text-sm font-semibold uppercase tracking-[0.35em] text-white/90"
+          >
             Mats van Rooijen
           </a>
           <nav className="hidden items-center gap-6 text-sm text-white/70 md:flex">
-            <a href="#about" className="transition hover:text-white">About</a>
-            <a href="#achievements" className="transition hover:text-white">Achievements</a>
-            <a href="#schedule" className="transition hover:text-white">Schedule</a>
-            <a href="#partners" className="transition hover:text-white">Sponsors</a>
+            <a href="#about" className="transition hover:text-white">
+              About
+            </a>
+            <a href="#achievements" className="transition hover:text-white">
+              Achievements
+            </a>
+            <a href="#gallery" className="transition hover:text-white">
+              Gallery
+            </a>
+            <a href="#schedule" className="transition hover:text-white">
+              Schedule
+            </a>
+            <a href="#partners" className="transition hover:text-white">
+              Sponsors
+            </a>
             <a
               href="#contact"
               className="rounded-full border px-4 py-2 font-medium transition hover:scale-[1.02]"
-              style={{ borderColor: theme.accent, backgroundColor: theme.accent, color: theme.bg }}
+              style={{
+                borderColor: theme.accent,
+                backgroundColor: theme.accent,
+                color: theme.bg,
+              }}
             >
               Contact
             </a>
@@ -174,14 +218,17 @@ function App() {
               </div>
 
               <div className="space-y-5">
-                <p className="text-sm uppercase tracking-[0.35em] text-white/45">Next generation driver</p>
+                <p className="text-sm uppercase tracking-[0.35em] text-white/45">
+                  Next generation driver
+                </p>
                 <h1 className="max-w-4xl text-5xl font-black uppercase leading-none tracking-tight sm:text-6xl lg:text-8xl">
                   Mats
                   <span className="block text-white/60">van Rooijen</span>
                 </h1>
                 <p className="max-w-2xl text-base leading-7 text-white/72 sm:text-lg">
-                  A 15-year-old Dutch racing driver building momentum from karting into the Mazda MX-5 Cup.
-                  Fast, focused, and developing through every lap, every weekend, every level.
+                  A 15-year-old Dutch racing driver building momentum from
+                  karting into the Mazda MX-5 Cup. Fast, focused, and
+                  developing through every lap, every weekend, every level.
                 </p>
               </div>
 
@@ -222,8 +269,12 @@ function App() {
               <div className="grid gap-3 sm:grid-cols-2 xl:grid-cols-4">
                 {stats.map((item) => (
                   <div key={item.label} className="glass rounded-3xl p-4">
-                    <div className="text-xs uppercase tracking-[0.25em] text-white/45">{item.label}</div>
-                    <div className="mt-2 text-lg font-semibold text-white">{item.value}</div>
+                    <div className="text-xs uppercase tracking-[0.25em] text-white/45">
+                      {item.label}
+                    </div>
+                    <div className="mt-2 text-lg font-semibold text-white">
+                      {item.value}
+                    </div>
                   </div>
                 ))}
               </div>
@@ -236,8 +287,12 @@ function App() {
                 <div className="relative space-y-8">
                   <div className="flex items-start justify-between gap-4">
                     <div>
-                      <p className="text-xs uppercase tracking-[0.3em] text-white/45">Driver profile</p>
-                      <h2 className="mt-3 text-2xl font-bold uppercase tracking-tight">Purpose-built for progress</h2>
+                      <p className="text-xs uppercase tracking-[0.3em] text-white/45">
+                        Driver profile
+                      </p>
+                      <h2 className="mt-3 text-2xl font-bold uppercase tracking-tight">
+                        Purpose-built for progress
+                      </h2>
                     </div>
                     <div className="rounded-full border border-white/10 px-3 py-1 text-xs uppercase tracking-[0.25em] text-white/60">
                       2026
@@ -247,22 +302,33 @@ function App() {
                   <div className="grid gap-4 sm:grid-cols-2">
                     <div className="rounded-3xl border border-white/10 bg-black/30 p-5">
                       <div className="text-4xl font-black">P8</div>
-                      <p className="mt-2 text-sm text-white/65">Overall on debut race weekend at Zandvoort</p>
+                      <p className="mt-2 text-sm text-white/65">
+                        Overall on debut race weekend at Zandvoort
+                      </p>
                     </div>
                     <div className="rounded-3xl border border-white/10 bg-black/30 p-5">
                       <div className="text-4xl font-black">P5</div>
-                      <p className="mt-2 text-sm text-white/65">Rookie class on debut weekend</p>
+                      <p className="mt-2 text-sm text-white/65">
+                        Rookie class on debut weekend
+                      </p>
                     </div>
                   </div>
 
                   <div className="rounded-3xl border border-white/10 bg-black/30 p-5">
                     <div className="flex items-center justify-between gap-4">
-                      <span className="text-sm uppercase tracking-[0.25em] text-white/45">Mindset</span>
-                      <span className="text-xs text-white/45">Focused / Coachable / Competitive</span>
+                      <span className="text-sm uppercase tracking-[0.25em] text-white/45">
+                        Mindset
+                      </span>
+                      <span className="text-xs text-white/45">
+                        Focused / Coachable / Competitive
+                      </span>
                     </div>
                     <p className="mt-3 text-sm leading-7 text-white/70">
-                      The page is built to feel premium and layered: cinematic hero visuals, fast transitions,
-                      sharp typography, and sponsor-first calls to action inspired by modern professional driver sites.
+                      Driven by focus, discipline, and determination, Mats is
+                      building his path toward endurance racing. Every session,
+                      race, and challenge is approached with the mindset of
+                      continuous improvement, long-term growth, and performing
+                      under pressure when it matters most.
                     </p>
                   </div>
                 </div>
@@ -275,7 +341,9 @@ function App() {
           <div className="mx-auto grid max-w-7xl gap-8 px-6 lg:grid-cols-[0.9fr_1.1fr] lg:px-8">
             <div className="space-y-6">
               <div className="space-y-4">
-                <p className="text-sm uppercase tracking-[0.35em] text-white/45">Who Mats is</p>
+                <p className="text-sm uppercase tracking-[0.35em] text-white/45">
+                  Who Mats is
+                </p>
                 <h2 className="text-3xl font-black uppercase leading-tight sm:text-5xl">
                   Young. Relentless. Already racing forward.
                 </h2>
@@ -288,27 +356,36 @@ function App() {
                 />
               </div>
             </div>
+
             <div className="grid gap-6 sm:grid-cols-2">
               <div className="glass rounded-[2rem] p-6">
                 <h3 className="text-lg font-semibold">From karting to cars</h3>
                 <p className="mt-3 text-sm leading-7 text-white/70">
-                  Mats built his race craft in karting before stepping into the Mazda MX-5 Cup. The transition shows a
-                  clear development path: raw speed, disciplined learning, and competitive consistency.
+                  Mats built his race craft in karting before stepping into the
+                  Mazda MX-5 Cup. The transition shows a clear development
+                  path: raw speed, disciplined learning, and competitive
+                  consistency.
                 </p>
               </div>
+
               <div className="glass rounded-[2rem] p-6">
                 <h3 className="text-lg font-semibold">Why brands fit here</h3>
                 <p className="mt-3 text-sm leading-7 text-white/70">
-                  Sponsor alignment is about more than logo placement. It is access to a rising athlete, compelling
-                  content, authentic storytelling, and visibility in a national racing environment.
+                  Sponsor alignment is about more than logo placement. It is
+                  access to a rising athlete, compelling content, authentic
+                  storytelling, and visibility in a national racing environment.
                 </p>
               </div>
+
               <div className="glass rounded-[2rem] p-6 sm:col-span-2">
                 <h3 className="text-lg font-semibold">Positioning</h3>
                 <p className="mt-3 text-sm leading-7 text-white/70">
-                  This landing page is structured in multiple visual layers to create depth: animated background grids,
-                  floating light fields, glass cards, split-content sections, and bold stat modules. That gives Mats a
-                  more professional, sponsor-ready presence while keeping the experience fast and easy to scan.
+                  Mats represents the next generation of racing talent:
+                  focused, ambitious, and committed to growth. With a
+                  background in karting and a clear goal of competing in
+                  endurance racing, he approaches every race weekend as an
+                  opportunity to learn, improve, and move one step closer to
+                  the professional level.
                 </p>
               </div>
             </div>
@@ -317,38 +394,84 @@ function App() {
 
         <section id="achievements" className="border-t border-white/10 bg-neutral-900 py-24">
           <div className="mx-auto max-w-7xl px-6 lg:px-8">
-            <div className="mb-10 flex flex-col gap-4 sm:flex-row sm:items-end sm:justify-between">
+            <div className="mb-10">
               <div>
-                <p className="text-sm uppercase tracking-[0.35em] text-white/45">Achievements</p>
-                <h2 className="mt-3 text-3xl font-black uppercase sm:text-5xl">Building the racing résumé</h2>
+                <p className="text-sm uppercase tracking-[0.35em] text-white/45">
+                  Achievements
+                </p>
+                <h2 className="mt-3 text-3xl font-black uppercase sm:text-5xl">
+                  Building the racing résumé
+                </h2>
               </div>
-              <p className="max-w-xl text-sm leading-7 text-white/65">
-                A concise highlights section for media, fans, and sponsors to quickly understand trajectory and potential.
-              </p>
             </div>
 
             <div className="grid gap-5 lg:grid-cols-3">
               {achievements.map((item) => (
                 <article key={item.title} className="glass rounded-[2rem] p-6">
-                  <div className="text-xs uppercase tracking-[0.3em] text-white/40">{item.year}</div>
+                  <div className="text-xs uppercase tracking-[0.3em] text-white/40">
+                    {item.year}
+                  </div>
                   <h3 className="mt-4 text-xl font-semibold">{item.title}</h3>
-                  <p className="mt-3 text-sm leading-7 text-white/68">{item.description}</p>
+                  <p className="mt-3 text-sm leading-7 text-white/68">
+                    {item.description}
+                  </p>
                 </article>
               ))}
             </div>
           </div>
         </section>
 
+        <section id="gallery" className="border-t border-white/10 bg-neutral-950 py-24">
+          <div className="mx-auto max-w-7xl px-6 lg:px-8">
+            <div className="mb-10">
+              <p className="text-sm uppercase tracking-[0.35em] text-white/45">
+                Gallery
+              </p>
+              <h2 className="mt-3 text-3xl font-black uppercase sm:text-5xl">
+                Mats in action
+              </h2>
+            </div>
+
+            <div className="grid gap-5 lg:grid-cols-[1.2fr_0.8fr]">
+              <div className="glass overflow-hidden rounded-[2rem]">
+                <img
+                  src="/Mazda1.jpg"
+                  alt={"Front view of Mats van Rooijen's Mazda MX-5 Cup car in action"}
+                  className="h-full min-h-[420px] w-full object-cover"
+                />
+              </div>
+
+              <div className="grid gap-5">
+                <div className="glass overflow-hidden rounded-[2rem]">
+                  <img
+                    src="Mazda2.jpg"
+                    alt={galleryImages[1].alt}
+                    className="h-[202px] w-full object-cover"
+                  />
+                </div>
+                <div className="glass overflow-hidden rounded-[2rem]">
+                  <img
+                    src="Mazda3.jpg"
+                    alt={galleryImages[2].alt}
+                    className="h-[202px] w-full object-cover"
+                  />
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
         <section id="schedule" className="border-t border-white/10 bg-neutral-950 py-24">
           <div className="mx-auto max-w-7xl px-6 lg:px-8">
-            <div className="mb-10 flex flex-col gap-4 lg:flex-row lg:items-end lg:justify-between">
+            <div className="mb-10">
               <div>
-                <p className="text-sm uppercase tracking-[0.35em] text-white/45">Race schedule</p>
-                <h2 className="mt-3 text-3xl font-black uppercase sm:text-5xl">2026 calendar</h2>
+                <p className="text-sm uppercase tracking-[0.35em] text-white/45">
+                  Race schedule
+                </p>
+                <h2 className="mt-3 text-3xl font-black uppercase sm:text-5xl">
+                  2026 calendar
+                </h2>
               </div>
-              <p className="max-w-2xl text-sm leading-7 text-white/65">
-                Designed as a clear sponsor touchpoint so partners instantly see where the car, driver, and brand will be visible.
-              </p>
             </div>
 
             <div className="overflow-hidden rounded-[2rem] border border-white/10">
@@ -359,43 +482,98 @@ function App() {
                 <div>Status</div>
               </div>
               <div>
-                {schedule.map((item) => (
-                  <div
-                    key={`${item.date}-${item.event}`}
-                    className="grid grid-cols-1 gap-3 border-b border-white/10 px-5 py-5 last:border-b-0 sm:grid-cols-[1.05fr_1.2fr_1.1fr_0.8fr] sm:items-center"
-                  >
-                    <div className="text-sm font-medium text-white/90">{item.date}</div>
-                    <div className="text-sm text-white/80">{item.event}</div>
-                    <div className="text-sm text-white/65">{item.circuit}</div>
-                    <div>
-                      <span className="inline-flex rounded-full border border-white/12 bg-white/6 px-3 py-1 text-xs uppercase tracking-[0.2em] text-white/75">
-                        {item.status}
-                      </span>
+                {schedule.map((item) => {
+                  const isCompleted = item.status === "Completed";
+                  return (
+                    <div
+                      key={`${item.date}-${item.event}`}
+                      className="grid grid-cols-1 gap-3 border-b border-white/10 px-5 py-5 last:border-b-0 sm:grid-cols-[1.05fr_1.2fr_1.1fr_0.8fr] sm:items-center"
+                    >
+                      <div className="text-sm font-medium text-white/90">
+                        {item.date}
+                      </div>
+                      <div className="text-sm text-white/80">{item.event}</div>
+                      <div className="text-sm text-white/65">{item.circuit}</div>
+                      <div>
+                        <span
+                          className="inline-flex rounded-full border px-3 py-1 text-xs uppercase tracking-[0.2em]"
+                          style={
+                            isCompleted
+                              ? {
+                                  backgroundColor: theme.accent,
+                                  borderColor: theme.accent,
+                                  color: theme.bg,
+                                }
+                              : {
+                                  backgroundColor: "rgba(255,255,255,0.06)",
+                                  borderColor: "rgba(255,255,255,0.12)",
+                                  color: theme.surface,
+                                }
+                          }
+                        >
+                          {item.status}
+                        </span>
+                      </div>
                     </div>
-                  </div>
-                ))}
+                  );
+                })}
               </div>
             </div>
           </div>
         </section>
 
         <section id="partners" className="border-t border-white/10 bg-neutral-900 py-24">
-          <div className="mx-auto grid max-w-7xl gap-8 px-6 lg:grid-cols-[0.95fr_1.05fr] lg:px-8">
-            <div>
-              <p className="text-sm uppercase tracking-[0.35em] text-white/45">Sponsor opportunities</p>
-              <h2 className="mt-3 text-3xl font-black uppercase sm:text-5xl">Built for brands that want to grow with a driver</h2>
-              <p className="mt-5 max-w-xl text-sm leading-7 text-white/68">
-                For sponsors, Mats offers a high-upside story: youth, progression, visibility, and a clean personal brand.
-                This section gives enough substance to convert curiosity into a conversation.
-              </p>
+          <div className="mx-auto max-w-7xl px-6 lg:px-8">
+            <div className="grid gap-8 lg:grid-cols-[0.95fr_1.05fr]">
+              <div>
+                <p className="text-sm uppercase tracking-[0.35em] text-white/45">
+                  Sponsor opportunities
+                </p>
+                <h2 className="mt-3 text-3xl font-black uppercase sm:text-5xl">
+                  Built for brands that want to grow with a driver
+                </h2>
+                <p className="mt-5 max-w-xl text-sm leading-7 text-white/68">
+                  For sponsors, Mats offers a high-upside story: youth,
+                  progression, visibility, and a clean personal brand. This
+                  section gives enough substance to convert curiosity into a
+                  conversation.
+                </p>
+              </div>
+
+              <div className="grid gap-4 sm:grid-cols-2">
+                {partners.map((item) => (
+                  <div
+                    key={item}
+                    className="glass rounded-[2rem] p-6 text-sm leading-7 text-white/78"
+                  >
+                    {item}
+                  </div>
+                ))}
+              </div>
             </div>
 
-            <div className="grid gap-4 sm:grid-cols-2">
-              {partners.map((item) => (
-                <div key={item} className="glass rounded-[2rem] p-6 text-sm leading-7 text-white/78">
-                  {item}
-                </div>
-              ))}
+            <div className="mt-16">
+              <p className="text-sm uppercase tracking-[0.35em] text-white/45">
+                Current partners
+              </p>
+              <h3 className="mt-3 text-2xl font-black uppercase sm:text-4xl">
+                Companies already on the journey
+              </h3>
+
+              <div className="mt-8 grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
+                {currentPartners.map((partner) => (
+                  <div
+                    key={partner.name}
+                    className="glass flex min-h-[180px] items-center justify-center rounded-[2rem] p-8"
+                  >
+                    <img
+                      src={partner.logo}
+                      alt={partner.name}
+                      className="max-h-24 w-full object-contain"
+                    />
+                  </div>
+                ))}
+              </div>
             </div>
           </div>
         </section>
@@ -404,20 +582,30 @@ function App() {
           <div className="mx-auto max-w-7xl px-6 lg:px-8">
             <div className="grid gap-8 lg:grid-cols-[0.9fr_1.1fr]">
               <div className="space-y-5">
-                <p className="text-sm uppercase tracking-[0.35em] text-white/45">Contact</p>
-                <h2 className="text-3xl font-black uppercase sm:text-5xl">Join the journey</h2>
-                <p className="max-w-xl text-sm leading-7 text-white/68">
-                  Use this block as the sponsor conversion point. Replace the placeholder email or wire the form to your own backend, CRM, or email automation.
+                <p className="text-sm uppercase tracking-[0.35em] text-white/45">
+                  Contact
                 </p>
+                <h2 className="text-3xl font-black uppercase sm:text-5xl">
+                  Join the journey
+                </h2>
+                <p className="max-w-xl text-sm leading-7 text-white/68">
+                  Interested in becoming part of the journey? Whether you're
+                  looking to increase brand visibility, create authentic
+                  content, or support the next generation of racing talent,
+                  we'd love to explore the possibilities together.
+                </p>
+
                 <div className="glass rounded-[2rem] p-6">
-                  <div className="text-xs uppercase tracking-[0.25em] text-white/40">Primary contact</div>
+                  <div className="text-xs uppercase tracking-[0.25em] text-white/40">
+                    Primary contact
+                  </div>
                   <a
-                    href="mailto:partners@matsvanrooijen.com"
+                    href="mailto:matsvanrooijen@gmail.com"
                     className="mt-3 block text-xl font-semibold text-white underline decoration-white/20 underline-offset-4"
                   >
-                    partners@matsvanrooijen.com
+                    matsvanrooijen@gmail.com
                   </a>
-                  <p className="mt-3 text-sm text-white/60">Replace with the real sponsor or management email.</p>
+
                   <div className="mt-5 flex flex-wrap gap-3">
                     <a
                       href="https://www.instagram.com/matsvanrooijen_official/"
@@ -444,31 +632,42 @@ function App() {
               <form className="glass rounded-[2rem] p-6 sm:p-8">
                 <div className="grid gap-5 sm:grid-cols-2">
                   <label className="block">
-                    <span className="mb-2 block text-xs uppercase tracking-[0.25em] text-white/45">Name</span>
+                    <span className="mb-2 block text-xs uppercase tracking-[0.25em] text-white/45">
+                      Name
+                    </span>
                     <input
                       type="text"
                       placeholder="Your name"
                       className="w-full rounded-2xl border border-white/10 bg-black/30 px-4 py-3 text-sm text-white outline-none transition placeholder:text-white/25 focus:border-white/30"
                     />
                   </label>
+
                   <label className="block">
-                    <span className="mb-2 block text-xs uppercase tracking-[0.25em] text-white/45">Company</span>
+                    <span className="mb-2 block text-xs uppercase tracking-[0.25em] text-white/45">
+                      Company
+                    </span>
                     <input
                       type="text"
                       placeholder="Company"
                       className="w-full rounded-2xl border border-white/10 bg-black/30 px-4 py-3 text-sm text-white outline-none transition placeholder:text-white/25 focus:border-white/30"
                     />
                   </label>
+
                   <label className="block sm:col-span-2">
-                    <span className="mb-2 block text-xs uppercase tracking-[0.25em] text-white/45">Email</span>
+                    <span className="mb-2 block text-xs uppercase tracking-[0.25em] text-white/45">
+                      Email
+                    </span>
                     <input
                       type="email"
                       placeholder="name@company.com"
                       className="w-full rounded-2xl border border-white/10 bg-black/30 px-4 py-3 text-sm text-white outline-none transition placeholder:text-white/25 focus:border-white/30"
                     />
                   </label>
+
                   <label className="block sm:col-span-2">
-                    <span className="mb-2 block text-xs uppercase tracking-[0.25em] text-white/45">Message</span>
+                    <span className="mb-2 block text-xs uppercase tracking-[0.25em] text-white/45">
+                      Message
+                    </span>
                     <textarea
                       rows={6}
                       placeholder="Tell us about your brand, goals, and partnership idea."
@@ -477,8 +676,7 @@ function App() {
                   </label>
                 </div>
 
-                <div className="mt-6 flex flex-wrap items-center justify-between gap-4">
-                  <p className="text-xs uppercase tracking-[0.2em] text-white/38">Best connected to a real form handler or CRM</p>
+                <div className="mt-6 flex flex-wrap items-center justify-end gap-4">
                   <button
                     type="submit"
                     className="rounded-full px-6 py-3 text-sm font-semibold transition hover:scale-[1.02]"
@@ -495,4 +693,5 @@ function App() {
     </div>
   );
 }
+
 export default App;
