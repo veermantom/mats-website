@@ -82,21 +82,6 @@ function App() {
 
   const aboutImage = "/Matsenmazda.jpg";
 
-  const galleryImages = [
-    {
-      src: "/Foto 25-04-2026, 15 22 52.jpg",
-      alt: "Mats van Rooijen racing his Mazda MX-5 on track",
-    },
-    {
-      src: "/Foto 18-04-2026, 17 17 27 (1).jpg",
-      alt: "Front view of Mats van Rooijen's Mazda MX-5 Cup car in action",
-    },
-    {
-      src: "/Foto 22-04-2026, 21 37 33.jpg",
-      alt: "Mats van Rooijen with trophy beside his Mazda MX-5 Cup car",
-    },
-  ];
-
   const partners = [
     "Brand visibility on car and racewear",
     "Hospitality and event-day experiences",
@@ -143,12 +128,17 @@ function App() {
         }
         .grid-race {
           background-image:
-            linear-gradient(rgba(243,240,230,0.05) 1px, transparent 1px),
-            linear-gradient(90deg, rgba(243,240,230,0.05) 1px, transparent 1px);
+            linear-gradient(rgba(243, 240, 230, 0.05) 1px, transparent 1px),
+            linear-gradient(90deg, rgba(243, 240, 230, 0.05) 1px, transparent 1px);
           background-size: 32px 32px;
         }
         .track-lines {
-          background-image: linear-gradient(90deg, transparent, rgba(224,245,46,0.4), transparent);
+          background-image: linear-gradient(
+            90deg,
+            transparent,
+            rgba(224, 245, 46, 0.4),
+            transparent
+          );
           animation: pulseLine 6s ease-in-out infinite;
         }
       `}</style>
@@ -164,6 +154,7 @@ function App() {
           >
             Mats van Rooijen
           </a>
+
           <nav className="hidden items-center gap-6 text-sm text-white/70 md:flex">
             <a href="#about" className="transition hover:text-white">
               About
@@ -240,12 +231,14 @@ function App() {
                 >
                   Join the journey
                 </a>
+
                 <a
                   href="#schedule"
                   className="rounded-full border border-white/15 px-6 py-3 text-sm font-semibold text-white transition hover:bg-white/8"
                 >
                   View race schedule
                 </a>
+
                 <a
                   href="https://www.instagram.com/matsvanrooijen_official/"
                   target="_blank"
@@ -255,6 +248,7 @@ function App() {
                 >
                   Instagram
                 </a>
+
                 <a
                   href="https://www.linkedin.com/in/mats-van-rooijen-540354314/"
                   target="_blank"
@@ -284,6 +278,7 @@ function App() {
               <div className="absolute inset-x-8 bottom-6 h-24 rounded-full bg-white/10 blur-3xl" />
               <div className="glass relative w-full max-w-xl overflow-hidden rounded-[2rem] p-6 sm:p-8">
                 <div className="absolute inset-0 bg-[linear-gradient(135deg,rgba(255,255,255,0.12),transparent_45%,rgba(255,255,255,0.04))]" />
+
                 <div className="relative space-y-8">
                   <div className="flex items-start justify-between gap-4">
                     <div>
@@ -306,6 +301,7 @@ function App() {
                         Overall on debut race weekend at Zandvoort
                       </p>
                     </div>
+
                     <div className="rounded-3xl border border-white/10 bg-black/30 p-5">
                       <div className="text-4xl font-black">P5</div>
                       <p className="mt-2 text-sm text-white/65">
@@ -348,11 +344,12 @@ function App() {
                   Young. Relentless. Already racing forward.
                 </h2>
               </div>
-              <div className="glass overflow-hidden rounded-[2rem]">
+
+              <div className="overflow-hidden rounded-[2rem]">
                 <img
                   src={aboutImage}
                   alt="Portrait of Mats van Rooijen"
-                  className="h-[420px] w-full object-cover object-center"
+                  className="block h-[420px] w-full object-cover object-center"
                 />
               </div>
             </div>
@@ -395,14 +392,12 @@ function App() {
         <section id="achievements" className="border-t border-white/10 bg-neutral-900 py-24">
           <div className="mx-auto max-w-7xl px-6 lg:px-8">
             <div className="mb-10">
-              <div>
-                <p className="text-sm uppercase tracking-[0.35em] text-white/45">
-                  Achievements
-                </p>
-                <h2 className="mt-3 text-3xl font-black uppercase sm:text-5xl">
-                  Building the racing résumé
-                </h2>
-              </div>
+              <p className="text-sm uppercase tracking-[0.35em] text-white/45">
+                Achievements
+              </p>
+              <h2 className="mt-3 text-3xl font-black uppercase sm:text-5xl">
+                Building the racing résumé
+              </h2>
             </div>
 
             <div className="grid gap-5 lg:grid-cols-3">
@@ -433,27 +428,28 @@ function App() {
             </div>
 
             <div className="grid gap-5 lg:grid-cols-[1.2fr_0.8fr]">
-              <div className="glass overflow-hidden rounded-[2rem]">
+              <div className="overflow-hidden rounded-[2rem] h-[420px]">
                 <img
                   src="/Mazda1.jpg"
-                  alt={"Front view of Mats van Rooijen's Mazda MX-5 Cup car in action"}
-                  className="h-full min-h-[420px] w-full object-cover"
+                  alt="Front view of Mats van Rooijen's Mazda MX-5 Cup car in action"
+                  className="block h-full w-full object-cover"
                 />
               </div>
 
               <div className="grid gap-5">
-                <div className="glass overflow-hidden rounded-[2rem]">
+                <div className="overflow-hidden rounded-[2rem] h-[202px]">
                   <img
-                    src="Mazda2.jpg"
-                    alt={galleryImages[1].alt}
-                    className="h-[202px] w-full object-cover"
+                    src="/Mazda2.jpg"
+                    alt="Mats van Rooijen racing his Mazda MX-5 on track"
+                    className="block h-full w-full object-cover"
                   />
                 </div>
-                <div className="glass overflow-hidden rounded-[2rem]">
+
+                <div className="overflow-hidden rounded-[2rem] h-[202px]">
                   <img
-                    src="Mazda3.jpg"
-                    alt={galleryImages[2].alt}
-                    className="h-[202px] w-full object-cover"
+                    src="/Mazda3.jpg"
+                    alt="Mats van Rooijen with trophy beside his Mazda MX-5 Cup car"
+                    className="block h-full w-full object-cover"
                   />
                 </div>
               </div>
@@ -464,14 +460,12 @@ function App() {
         <section id="schedule" className="border-t border-white/10 bg-neutral-950 py-24">
           <div className="mx-auto max-w-7xl px-6 lg:px-8">
             <div className="mb-10">
-              <div>
-                <p className="text-sm uppercase tracking-[0.35em] text-white/45">
-                  Race schedule
-                </p>
-                <h2 className="mt-3 text-3xl font-black uppercase sm:text-5xl">
-                  2026 calendar
-                </h2>
-              </div>
+              <p className="text-sm uppercase tracking-[0.35em] text-white/45">
+                Race schedule
+              </p>
+              <h2 className="mt-3 text-3xl font-black uppercase sm:text-5xl">
+                2026 calendar
+              </h2>
             </div>
 
             <div className="overflow-hidden rounded-[2rem] border border-white/10">
@@ -481,9 +475,11 @@ function App() {
                 <div>Circuit</div>
                 <div>Status</div>
               </div>
+
               <div>
                 {schedule.map((item) => {
                   const isCompleted = item.status === "Completed";
+
                   return (
                     <div
                       key={`${item.date}-${item.event}`}
@@ -564,12 +560,12 @@ function App() {
                 {currentPartners.map((partner) => (
                   <div
                     key={partner.name}
-                    className="glass flex min-h-[180px] items-center justify-center rounded-[2rem] p-8"
+                    className="overflow-hidden rounded-[2rem] bg-white"
                   >
                     <img
                       src={partner.logo}
                       alt={partner.name}
-                      className="max-h-24 w-full object-contain"
+                      className="block h-[180px] w-full object-contain p-8"
                     />
                   </div>
                 ))}
